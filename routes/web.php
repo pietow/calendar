@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Carbon\Carbon;
+use Carbon\CarbonPeriod;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    #$period = CarbonPeriod::create('2021-01-01','2021-12-31');
+    #dd($period->toArray()[0]->format(' F '));
     return view('welcome');
 });
 
