@@ -49619,7 +49619,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var counter = 0;
 var child_count = $("div.calendar").children().length - 1;
 console.log(child_count);
-$("#left").click(function () {
+$("#right").click(function () {
   if (counter == child_count) {} else {
     counter++;
   }
@@ -49629,7 +49629,7 @@ $("#left").click(function () {
     "transform": distance
   });
 });
-$("#right").click(function () {
+$("#left").click(function () {
   counter--;
   if (counter < 0) counter = 0;
   var distance = "translate(-".concat(counter * 100, "vw)");

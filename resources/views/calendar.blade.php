@@ -13,24 +13,55 @@
     </head>
     <body>
         <div class="calendar" id="cal" style="border-style: solid;">
-            <div class="calendar__month" id="jan">
+            @foreach ($year as $month)
+            <div class="calendar__month" id="{{$month[0]->format('M')}}">
                 <div class="calendar__picture">
                       <h2>{{date('l \t\h\e jS')}}</h2>
-                      <h3>November</h3>
+                      <h3>{{$month[0]->locale('de_DE')->monthName}}</h3>
+                </div>
+                <div class="calendar__date">
+                     <div class="calendar__day">M</div>
+                     <div class="calendar__day">T</div>
+                     <div class="calendar__day">W</div>
+                     <div class="calendar__day">T</div>
+                     <div class="calendar__day">F</div>
+                     <div class="calendar__day">S</div>
+                     <div class="calendar__day">S</div>
+
+                    @if($month[0]->format('l') == "Monday")
+                       @for ($i = 0; $i < 0; $i++)
+                            <div class="calendar__day">{{$month[0]->format('l')}}</div>
+                       @endfor 
+                    @elseif($month[0]->format('l') == "Tuesday")
+                       @for ($i = 0; $i < 1; $i++)
+                            <div class="calendar__day">{{$month[0]->format('l')}}</div>
+                       @endfor 
+                    @elseif($month[0]->format('l') == "Wednesday")
+                       @for ($i = 0; $i < 2; $i++)
+                            <div class="calendar__day">{{$month[0]->format('l')}}</div>
+                       @endfor 
+                    @elseif($month[0]->format('l') == "Thursday")
+                       @for ($i = 0; $i < 3; $i++)
+                            <div class="calendar__day">{{$month[0]->format('l')}}</div>
+                       @endfor 
+                    @elseif($month[0]->format('l') == "Friday")
+                       @for ($i = 0; $i < 4; $i++)
+                            <div class="calendar__day">{{$month[0]->format('l')}}</div>
+                       @endfor 
+                    @elseif($month[0]->format('l') == "Saturday")
+                       @for ($i = 0; $i < 5; $i++)
+                            <div class="calendar__day">{{$month[0]->format('l')}}</div>
+                       @endfor 
+                    @endif      
+
+                    @foreach ($month as $day)
+                     <div class="calendar__day">{{$day->format('d')}}</div>
+                    @endforeach
+                     
+
                 </div>
             </div>
-            <div class="calendar__month" id="feb">
-                <div class="calendar__picture">
-                      <h2>{{date('l \t\h\e jS')}}</h2>
-                      <h3>feb</h3>
-                </div>
-            </div>
-            <div class="calendar__month" id="märz">
-                <div class="calendar__picture">
-                      <h2>{{date('l \t\h\e jS')}}</h2>
-                      <h3>feb</h3>
-                </div>
-            </div>
+            @endforeach
         </div>
 
 <button id='left'>
