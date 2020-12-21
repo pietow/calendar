@@ -49550,6 +49550,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  */
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+//
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
@@ -49615,9 +49616,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-//alert('yeah')
-var bla = $("div.calendar").children();
-console.log(bla);
+var counter = 0;
+var child_count = $("div.calendar").children().length - 1;
+console.log(child_count);
+$("#left").click(function () {
+  if (counter == child_count) {} else {
+    counter++;
+  }
+
+  var distance = "translate(-".concat(counter * 100, "vw)");
+  $("div.calendar__month").css({
+    "transform": distance
+  });
+});
+$("#right").click(function () {
+  counter--;
+  if (counter < 0) counter = 0;
+  var distance = "translate(-".concat(counter * 100, "vw)");
+  $("div.calendar__month").css({
+    "transform": distance
+  });
+});
 
 /***/ }),
 

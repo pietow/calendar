@@ -4,3 +4,12 @@ body {
 a.button {
   border-radius: 5px;
 }
+div.calendar {
+  display: flex;
+  height: 90vh;
+  overflow: hidden;
+}
+div.calendar__month {
+  flex: 0 0 100vw;
+  transition: all 2s;
+}

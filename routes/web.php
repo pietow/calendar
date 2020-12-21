@@ -16,15 +16,21 @@ use Carbon\CarbonPeriod;
 */
 
 Route::get('/', function () {
-    #$period = CarbonPeriod::create('2021-01-01','2021-12-31');
+    $period = CarbonPeriod::create('2021-01-01','2021-12-31');
+    $days = []  ;
+    $months = []; 
+    foreach ( $period  as  $day ) {
+        array_push($months, $day->format("m"));
+    }
+    $months_year = array_unique($months);
+    foreach ( $months_year as $month) {
+        
+    }   
     #dd($period->toArray()[0]->format(' F '));
-    return view('welcome');
+    return view('calendar');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

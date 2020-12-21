@@ -1,17 +1,19 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
+    <div class="calendar" style="border-style: solid;">
+        <div class="calendar__month" id="jan">
+                <div class="calendar__picture">
+                      <h2>{{date('l \t\h\e jS')}}</h2>
+                      <h3>November</h3>
                     </div>
+                  </div>
+                  <div class="calendar__month" id="feb">
+                    <div class="calendar__picture">
+                      <h2>{{date('l \t\h\e jS')}}</h2>
+                      <h3>feb</h3>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
 </template>
 
 <script>
