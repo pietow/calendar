@@ -1,41 +1,62 @@
 body {
+  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
-  background: url("https://images.unsplash.com/photo-1516912481808-3406841bd33c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=183f2924ba5a8429441804609b2d4f61") no-repeat center / cover;
-  
+  backdrop-filter: blur(2px);
+//  transition: all 2s;
+  background: url('https://images.unsplash.com/photo-1558980971-97f50d0fed00?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=992&q=80') no-repeat center / cover;
 }
 
-a.button
-  -webkit-border-radius: 5px
-  -moz-border-radius: 5px
-  border-radius: 5px
 
-div.calendar
-    display:flex
-    height:90vh
-    overflow: hidden
-
-div.calendar__month
-    flex:0 0 100vw
+.calendar__month
+    flex:0 0 33vw //with equal to box
     transition: all 2s;
 
 .calendar {
-  position: relative;
-  width: 300px;
+//  position: relative;
+  display:flex
+  height: auto
+  overflow: hidden
+  width: 33vw; //width of calendar box
   background-color: #fff;
   box-sizing: border-box;
-  box-shadow: 0 5px 50px rgba(#000, 0.5);
+  box-shadow: 0 5px 50px rgba(gray, 0.5);
   border-radius: 8px;
+  border: solid 1px gray;
   overflow: hidden;
 }
 
+#Jan>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1558980971-97f50d0fed00?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=992&q=80') no-repeat center / cover; 
+#Feb>.calendar__picture
+  background: #262626 url(' https://images.unsplash.com/photo-1558694087-2e9ec2c6850f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 ') no-repeat center / cover; 
+#Mar>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1529447246-8f503636d2b3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80') no-repeat center / cover; 
+#Apr>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1558868540-3b5e8ca26dc2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center / cover; 
+#May>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1587648030644-b53c19c433fb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=701&q=80') no-repeat center / cover; 
+#Jun>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1549535473-b248b984185d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80') no-repeat center / cover; 
+#Jul>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1858&q=80') no-repeat center / cover; 
+#Aug>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80') no-repeat center / cover; 
+#Sep>.calendar__picture
+  background: #262626 url('http://mindfulnesspugetsound.org/wp-content/uploads/2014/03/Thay-Shambala-2006-larger.jpg') no-repeat center / cover;
+#Oct>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1489493512598-d08130f49bea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1348&q=80') no-repeat center / cover; 
+#Nov>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1516912481808-3406841bd33c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=183f2924ba5a8429441804609b2d4f61') no-repeat center / cover; 
+#Dec>.calendar__picture
+  background: #262626 url('https://images.unsplash.com/photo-1595140394281-589fcfe245c7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80') no-repeat center / cover; 
 .calendar__picture {
   position: relative;
-  height: 200px;
+  height: 33vh;
   padding: 20px;
   color: #fff;
   background: #262626 url("https://images.unsplash.com/photo-1516912481808-3406841bd33c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=183f2924ba5a8429441804609b2d4f61") no-repeat center / cover;
@@ -62,15 +83,19 @@ div.calendar__month
   }
 }
 
+
 .calendar__date {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 20% auto;
+  row-gap: 1em;
+//  grid-gap: 10px;
   box-sizing: border-box;
 }
 
 .calendar__day {
+  padding-bottom:5px;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +103,7 @@ div.calendar__month
   font-weight: 600;
   color: #262626;
   
-  &:nth-child(7) {
+  &:nth-child(7n) {
     color: #ff685d;
   }
 }
@@ -97,9 +122,16 @@ div.calendar__month
   
   &--current,
   &:hover {
-    background-color: #009688;
-    color: #fff !important;
-    font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  color: green !important;
+    font-weight: 1000;
     cursor: pointer;
   }
 }
+
+#right,#left
+    &:hover
+        cursor: pointer;

@@ -49617,22 +49617,81 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ (function(module, exports) {
 
 var counter = 0;
+var box = 33;
 var child_count = $("div.calendar").children().length - 1;
-console.log(child_count);
-$("#right").click(function () {
+
+var moveRight = function moveRight() {
   if (counter == child_count) {} else {
     counter++;
   }
 
-  var distance = "translate(-".concat(counter * 100, "vw)");
+  var distance = "translate(-".concat(counter * box, "vw)");
+  $("div.calendar__month").css({
+    "transform": distance
+  });
+};
+
+$("#right").click(moveRight);
+$("#left").click(function () {
+  counter--;
+  if (counter < 0) counter = 0;
+  var distance = "translate(-".concat(counter * box, "vw)");
   $("div.calendar__month").css({
     "transform": distance
   });
 });
-$("#left").click(function () {
-  counter--;
-  if (counter < 0) counter = 0;
-  var distance = "translate(-".concat(counter * 100, "vw)");
+
+var moveDate = function moveDate() {
+  if (counter == 0) {
+    var imag = $('#Jan > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 1) {
+    var imag = $('#Feb > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 2) {
+    var imag = $('#Mar > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 3) {
+    var imag = $('#Apr > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 4) {
+    var imag = $('#May > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 5) {
+    var imag = $('#Jun > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 6) {
+    var imag = $('#Jul > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 7) {
+    var imag = $('#Aug > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 8) {
+    var imag = $('#Sep > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 9) {
+    var imag = $('#Oct > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 10) {
+    var imag = $('#Nov > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  } else if (counter == 11) {
+    var imag = $('#Dec > .calendar__picture').css('background');
+    $('body').css('background', imag);
+  }
+};
+
+$("#right").add('#left').click(moveDate);
+$(document).ready(function () {
+  var distance = "translate(-".concat(0 * box, "vw)");
+  var d = new Date();
+  counter = 1; //counter = d.getMonth()-1;
+
+  moveDate();
+  var distance = "translate(-".concat(counter * box, "vw)");
+  $("div.calendar__month").css({
+    "transform": distance
+  });
   $("div.calendar__month").css({
     "transform": distance
   });

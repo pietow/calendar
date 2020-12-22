@@ -35,7 +35,7 @@ Route::get('/', function () {
     }   
     #dd($period->toArray()[0]->format(' F '));
     return view('calendar', ['year' => $year]);
-});
+})->middleware('auth');
 
 Auth::routes();
 
