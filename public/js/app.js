@@ -49710,15 +49710,27 @@ $(document).ready(function () {
 
 /***/ }),
 
+/***/ "./resources/stylus/login.styl":
+/*!*************************************!*\
+  !*** ./resources/stylus/login.styl ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!***************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/stylus/app.styl ***!
-  \***************************************************************/
+/*!*********************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/stylus/app.styl ./resources/stylus/login.styl ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/piet/projects/calendar/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/piet/projects/calendar/resources/stylus/app.styl */"./resources/stylus/app.styl");
+__webpack_require__(/*! /home/piet/projects/calendar/resources/stylus/app.styl */"./resources/stylus/app.styl");
+module.exports = __webpack_require__(/*! /home/piet/projects/calendar/resources/stylus/login.styl */"./resources/stylus/login.styl");
 
 
 /***/ })

@@ -35,9 +35,9 @@ Route::get('/', function () {
     }   
     #dd($period->toArray()[0]->format(' F '));
     return view('calendar', ['year' => $year]);
-})->middleware('auth');
+})->middleware('auth')->name('calendar');
 
-Auth::routes();
+Auth::routes(['register'=> false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
