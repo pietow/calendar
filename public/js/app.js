@@ -49728,9 +49728,9 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/piet/projects/calendar/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/piet/projects/calendar/resources/stylus/app.styl */"./resources/stylus/app.styl");
-module.exports = __webpack_require__(/*! /home/piet/projects/calendar/resources/stylus/login.styl */"./resources/stylus/login.styl");
+__webpack_require__(/*! /var/www/html/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/resources/stylus/app.styl */"./resources/stylus/app.styl");
+module.exports = __webpack_require__(/*! /var/www/html/resources/stylus/login.styl */"./resources/stylus/login.styl");
 
 
 /***/ })

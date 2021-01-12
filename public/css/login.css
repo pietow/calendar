@@ -14,6 +14,8 @@ p {
   text-align: center;
 }
 .container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: solid 1px #f00;
@@ -22,5 +24,16 @@ p {
   border-radius: 8px;
   border: solid 1px #808080;
   overflow: hidden;
-  background: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0.3)), smokewhite;
+  background: #fff;
+  padding: 10px;
+}
+form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-row: auto;
+}
+input,
+button {
+  margin: 8px;
+  border-radius: 15px;
 }
